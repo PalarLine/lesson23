@@ -1,0 +1,15 @@
+
+.startTheGame {
+    border-radius: 50px;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 26px;    
+}
+
+dialog {
+    width: 300px;
+    height: 300px;
+}

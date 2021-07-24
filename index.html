@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The game</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/app.js"></script>
+
+</head>
+
+<body>
+    <div class="container d-flex flex-column justify-content-around align-items-center vh-100 bg-info">
+        <h2>THE GAME</h2>
+        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, et. Eum quas numquam minus sint assumenda
+            atque repellendus ipsa dignissimos!</h4>
+
+        <button onclick="startTheGame()" class="btn btn-success  startTheGame">START</button>
+
+        <dialog class="d-flex flex-column justify-content-around d-none">
+
+            <div class="d-flex justify-content-center">
+                <span>Try </span>
+                <output id="counter" class="px-2">10</output>
+                <span> of 10</span>
+            </div>
+            <!-- <input type="number" id="counter" > -->
+
+
+            <label for="variant">Enter your variant</label>
+            <input type="number" id="variant">
+
+
+            <button onclick="submit()" class="btn btn-success submit my-3" id="start">SUBMIT</button>
+
+            <span>The Secret Number is 
+                <output id="message"></output>
+            </span>
+
+            <!-- <span>The Secret Number is
+                <output id="secretNumber"> </output>
+            </span> -->
+
+            <button onclick="repeatTheGame()" class="btn btn-success submit" id="repeat">REPEAT</button>
+
+
+        </dialog>
+
+    </div>
+</body>
+
+</html>
