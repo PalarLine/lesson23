@@ -16,12 +16,15 @@
 <body>
     <div class="container d-flex flex-column justify-content-around align-items-center vh-100 bg-info">
         <h2>THE GAME</h2>
-        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, et. Eum quas numquam minus sint assumenda
-            atque repellendus ipsa dignissimos!</h4>
+        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, et. Eum quas numquam minus sint assumenda  atque repellendus ipsa dignissimos!</h4>
 
-        <button onclick="startTheGame()" class="btn btn-success  startTheGame">START</button>
+        <button onclick="letsPlay()" class="btn btn-success  playTheGame">PLAY!</button>
+
+        <!-- <button onclick="startTheGame()" class="btn btn-success  startTheGame">START</button> -->
 
         <dialog class="d-flex flex-column justify-content-around d-none">
+
+            <!-- <button onclick="startTheGame()" class="btn btn-success  startTheGame">START</button> -->
 
             <div class="d-flex justify-content-center">
                 <span>Try </span>
@@ -37,13 +40,13 @@
 
             <button onclick="submit()" class="btn btn-success submit my-3" id="start">SUBMIT</button>
 
-            <span>The Secret Number is 
+            <span id='sss1' class="span1 ">The Secret Number is
                 <output id="message"></output>
             </span>
 
-            <!-- <span>The Secret Number is
+            <span id='sss2' class="span2 d-none">The Secret Number is
                 <output id="secretNumber"> </output>
-            </span> -->
+            </span> 
 
             <button onclick="repeatTheGame()" class="btn btn-success submit" id="repeat">REPEAT</button>
 
