@@ -14,44 +14,62 @@
 </head>
 
 <body>
-    <div class="container d-flex flex-column justify-content-around align-items-center vh-100 bg-info">
-        <h2>THE GAME</h2>
-        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, et. Eum quas numquam minus sint assumenda  atque repellendus ipsa dignissimos!</h4>
+    <div class="container vh-100 ">
 
-        <button onclick="letsPlay()" class="btn btn-success  playTheGame">PLAY!</button>
+        
 
-        <!-- <button onclick="startTheGame()" class="btn btn-success  startTheGame">START</button> -->
-
-        <dialog class="d-flex flex-column justify-content-around d-none">
-
-            <!-- <button onclick="startTheGame()" class="btn btn-success  startTheGame">START</button> -->
-
-            <div class="d-flex justify-content-center">
-                <span>Try </span>
-                <output id="counter" class="px-2">10</output>
-                <span> of 10</span>
+            <div>
+                <h1 class="text-info text-center my-2">THE GAME</h1>
             </div>
-            <!-- <input type="number" id="counter" > -->
+
+            <div>
+                <div>
+                    <h4 class="text-white text-center my-1">Are you lucky or are you clever? <br> Let's try yourself
+                        with the
+                        Game!
+                    </h4>
+                    <h5 class="text-white text-center my-1">The Machine choice a number from 1 to 100 in a random way.
+                        Your task
+                        is to guess this number.</h5>
 
 
-            <label for="variant">Enter your variant</label>
-            <input type="number" id="variant">
+                    <h2 class="text-white text-center my-1"> We will help you with tips</h2>
+                </div>
+                <div class="d-flex justify-content-center">
+
+                    <button onclick="letsPlay()" class="btn btn-info  my-1 playTheGame">PLAY!</button>
+
+                </div>
+            </div>
+        
+        <div>
+
+            <dialog class="d-flex flex-column justify-content-around d-none">
+
+                <div class="d-flex justify-content-center">
+                    <span>Try </span>
+                    <output id="counter" class="px-2">10</output>
+                    <span> of 10</span>
+                </div>
+
+                <label for="variant">Enter your variant</label>
+                <input type="number" id="variant">
 
 
-            <button onclick="submit()" class="btn btn-success submit my-3" id="start">SUBMIT</button>
+                <button onclick="submit()" class="btn btn-success submit my-3" id="start">SUBMIT</button>
 
-            <span id='sss1' class="span1 ">The Secret Number is
-                <output id="message"></output>
-            </span>
+                <span id='sss1' class="span1 ">The Secret Number is
+                    <output id="message"></output>
+                </span>
 
-            <span id='sss2' class="span2 d-none">The Secret Number is
-                <output id="secretNumber"> </output>
-            </span> 
+                <span id='sss2' class="span2 d-none">The Secret Number is
+                    <output id="secretNumber"> </output>
+                </span>
 
-            <button onclick="repeatTheGame()" class="btn btn-success submit" id="repeat">REPEAT</button>
+                <button onclick="repeatTheGame()" class="btn btn-success my-3 repeatTheGame" id="repeat">REPEAT</button>
 
-
-        </dialog>
+            </dialog>
+        </div>
 
     </div>
 </body>

@@ -1,74 +1,62 @@
 
-var machin = Math.floor((Math.random(1, 100))*100+1);
-console.log(machin);
-var i = 0;
+let randomNumber = Math.floor((Math.random(1, 100))*100+1);
+console.log(randomNumber);
+
+let i = 0;
+
+// event onclick button Play
 
 function letsPlay() {
- 
-    console.log("12");
 
-    let tag = document.querySelector('dialog');  
-    tag.classList.remove('d-none');
-    
-    
-          
-    
+    let tag1 = document.querySelector('dialog');  
+    tag1.classList.remove('d-none');
+    let tag2 = document.querySelector('div > div  + div');
+    tag2.classList.add('hidden');
+    // let elem = document.getElementById('wrapper');
+    // elem.style.display = 'none';
 }
 
+// event onclick button Submit
+        
+function submit() {   
 
-// function startTheGame() {
-
-
-        function submit() {
-
-             
-    
+    // counter of rounds
         if(i < 10) {
         i++;
-        let a = 10-i; 
-        counter.innerHTML = a; 
-          
-                if(a == 0) {
+        let count = 10-i; 
+        counter.innerHTML = count; 
+
+                if(count == 0) {
                     let tag = document.querySelector('#start');
                     tag.classList.add('btn-danger');
                     tag.classList.add('disabled');
-                    tag.innerText = "Game Over!";
+                    tag.innerText = "GAME OVER!";
                     sss1.classList.add('d-none');
                     sss2.classList.remove('d-none');
-                    secretNumber.innerHTML = machin;         
+                    secretNumber.innerHTML = randomNumber;         
                 }
-              
+            
+                // comparison of numbers                
+                let userNumber = +variant.value;
+                console.log(userNumber);
 
-                let number = +variant.value;
-                console.log(number);
-
-                    if(machin < number) {
+                    if(randomNumber < userNumber) {
 
                          message.innerHTML = 'less';
-                            } else if(machin > number) {
+                            } else if(randomNumber > userNumber) {
                                 message.innerHTML = 'greater';
                                     } else {
-            // message.innerHTML = 'You are a winner! Congratulations!';
                                     let tag = document.querySelector('#start');
+                                    tag.classList.add('btn-danger');
                                     tag.classList.add('disabled');
-                         tag.innerText = "WINNER!";
-            message.innerHTML = machin;
-        
-        // } else {
-        
-        // message.innerHTML = machin;
-           
+                                    tag.innerText = "WINNER!";
+                                    message.innerHTML = randomNumber;
 
-        // }
-
-        
-
-        }
+                                    }
     }
-
-
-
 } 
+
+// event onclick button Repeat
 
 function repeatTheGame() {
     let tag = document.querySelector('dialog');  
@@ -76,15 +64,19 @@ function repeatTheGame() {
     counter.innerText = 10;
     i = 0;
     variant.value = '';
-    start.innerHTML = 'SUBMIT!';
+    start.innerHTML = 'SUBMIT';
     start.classList.remove('disabled');
     start.classList.remove('btn-danger');
     sss1.classList.remove('d-none');
     sss2.classList.add('d-none');
     message.value = '';
-    machin = Math.floor((Math.random(1, 99))*100+1);
-    console.log(machin);
-    // letsPlay();
+    randomNumber = Math.floor((Math.random(1, 99))*100+1);
+    console.log(randomNumber);
+    
+    // let elem = document.getElementById('wrapper');
+    // elem.style.display = 'block';
+    let tag2 = document.querySelector('div  > div + div');
+    tag2.classList.remove('hidden');
 
+   
 }
-// }
