@@ -12,27 +12,26 @@ function letsPlay() {
     tag1.classList.remove('d-none');
     let tag2 = document.querySelector('div > div  + div');
     tag2.classList.add('hidden');
-    // let elem = document.getElementById('wrapper');
-    // elem.style.display = 'none';
+    
 }
 
 // event onclick button Submit
         
 function submit() {   
 
-    // counter of rounds
+    // round's counter 
         if(i < 10) {
         i++;
         let count = 10-i; 
         counter.innerHTML = count; 
 
                 if(count == 0) {
-                    let tag = document.querySelector('#start');
+                    let tag = document.querySelector('.submitButton');
                     tag.classList.add('btn-danger');
                     tag.classList.add('disabled');
                     tag.innerText = "GAME OVER!";
-                    sss1.classList.add('d-none');
-                    sss2.classList.remove('d-none');
+                    helpMessage.classList.add('d-none');
+                    secretNumberMessage.classList.remove('d-none');
                     secretNumber.innerHTML = randomNumber;         
                 }
             
@@ -46,7 +45,7 @@ function submit() {
                             } else if(randomNumber > userNumber) {
                                 message.innerHTML = 'greater';
                                     } else {
-                                    let tag = document.querySelector('#start');
+                                    let tag = document.querySelector('.submitButton');
                                     tag.classList.add('btn-danger');
                                     tag.classList.add('disabled');
                                     tag.innerText = "WINNER!";
@@ -59,24 +58,21 @@ function submit() {
 // event onclick button Repeat
 
 function repeatTheGame() {
+
     let tag = document.querySelector('dialog');  
     tag.classList.add('d-none'); 
     counter.innerText = 10;
     i = 0;
     variant.value = '';
-    start.innerHTML = 'SUBMIT';
-    start.classList.remove('disabled');
-    start.classList.remove('btn-danger');
-    sss1.classList.remove('d-none');
-    sss2.classList.add('d-none');
+    buttonCheckTheNumber.innerHTML = 'SUBMIT';
+    buttonCheckTheNumber.classList.remove('disabled');
+    buttonCheckTheNumber.classList.remove('btn-danger');
+    helpMessage.classList.remove('d-none');
+    secretNumberMessage.classList.add('d-none');
     message.value = '';
     randomNumber = Math.floor((Math.random(1, 99))*100+1);
     console.log(randomNumber);
-    
-    // let elem = document.getElementById('wrapper');
-    // elem.style.display = 'block';
     let tag2 = document.querySelector('div  > div + div');
     tag2.classList.remove('hidden');
-
    
 }
